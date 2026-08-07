@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["python311"]
+
+[phases.install]
+cmds = ["pip install --no-cache-dir -r requirements.txt || true"]
+
+[phases.start]
+cmd = "cd server/mcp-server && python3 server.py"
